@@ -26,7 +26,7 @@ public class Hooks {
             scenario.attach(screenShot, "image/png", scenario.getName());
         }
         System.out.println("---> @After : RUNNING BEFORE EACH SCENARIO");
-         Driver.closeDriver();
+        // Driver.closeDriver();
     }
 
     //@BeforeStep

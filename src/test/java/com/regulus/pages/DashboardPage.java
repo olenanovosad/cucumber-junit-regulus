@@ -11,6 +11,6 @@ public class DashboardPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-@FindBy(xpath="//a[@data-menu='194']")
+@FindBy(xpath="//a[@href='/web#menu_id=194&action=220']")
     public WebElement notesPage;
 }
