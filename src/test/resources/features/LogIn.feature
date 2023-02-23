@@ -5,7 +5,7 @@ Feature: ERP login feature
   As a user, I should be able to access all the features on the login page.
 
 
-  Scenario Outline:
+  Scenario Outline: Log in with valid credentials
     Given User is on log in page
     When user enters valid "<emails>"
     And user enters valid password "posmanager"
@@ -17,7 +17,7 @@ Feature: ERP login feature
       | posmanager11@info.com |
 
 @wip
-  Scenario Outline:
+  Scenario Outline: Log in with invalid credentials
     Given User is on log in page
     When user enters invalid email "<emails>"
     And user enters invalid password "<passwords>"
