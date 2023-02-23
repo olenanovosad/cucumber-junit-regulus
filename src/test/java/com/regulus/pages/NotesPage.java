@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class NotesPage extends DashboardPage{
@@ -34,4 +36,8 @@ public class NotesPage extends DashboardPage{
 
     @FindBy(xpath = "//div[@data-id='997']")
     public WebElement notesTimeLine;
+
+public List<WebElement> timelines = new ArrayList<>(Arrays.asList(todayTimeLine,thisWeekTimeLine,
+        LaterTimeLine,notesTimeLine,newTimeLine));
+
 }
