@@ -12,6 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class UserStory08_Notes {
 
@@ -83,4 +84,16 @@ Assert.assertTrue(notesPage.newNote.isDisplayed());
     }
 
 
+    @Then("user is able to drag and drop new note under each timeline")
+    public void userIsAbleToDragAndDropNewNoteUnderEachTimeline() {
+        Actions actions = new Actions(Driver.getDriver());
+        actions.dragAndDrop(notesPage.newNote,notesPage.todayTimeLine).perform();
+        actions.dragAndDrop(notesPage.newNote,notesPage.newTimeLine).perform();
+        actions.dragAndDrop(notesPage.newNote,notesPage.thisWeekTimeLine).perform();
+        actions.dragAndDrop(notesPage.newNote,notesPage.LaterTimeLine).perform();
+        actions.dragAndDrop(notesPage.newNote,notesPage.notesTimeLine).perform();
+
+
+
+    }
 }
