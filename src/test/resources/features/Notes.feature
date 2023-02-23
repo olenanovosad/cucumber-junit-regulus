@@ -3,8 +3,9 @@ Feature: Create a new note feature
   User Story:
   As a user, I should be able to create a note and assign it to the different timeline.
 
+@AC1
   Scenario: Verify the users can create notes.
-    Given User is on notes page
+    Given User is logged in notes page
     When user clicks create button
     Then user sees "New - Odoo" in the title
     When user selects from existing tags
