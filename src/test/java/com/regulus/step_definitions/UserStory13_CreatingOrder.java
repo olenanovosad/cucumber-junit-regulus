@@ -15,7 +15,7 @@ public class UserStory13_CreatingOrder {
 
     @Given("user is logged in on Manufacturing page")
     public void user_is_logged_in_on_manufacturing_page() {
-      Driver.getDriver().get(ConfigurationReader.getProperty("env"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
         logInPage.LogIn();
         manufacturingPage.manufacturingBtn.click();
     }
@@ -27,21 +27,25 @@ public class UserStory13_CreatingOrder {
 
     @Then("user sees New order page")
     public void user_sees_new_order_page() {
-       Assert.assertTrue(manufacturingPage.newOrder.isDisplayed());
+        Assert.assertTrue(manufacturingPage.newOrder.isDisplayed());
     }
 
     @When("user fills in all fields")
     public void user_fills_in_all_fields() {
-
+        manufacturingPage.producDropDown.click();
+        manufacturingPage.producOption.click();
+        // manufacturingPage.BillDropDown.click();
+        //manufacturingPage.billOption.click();
+        manufacturingPage.SourceDropDown.sendKeys("Olena");
     }
 
     @When("user clicks Save button")
     public void user_clicks_save_button() {
-
+        manufacturingPage.SaveBtn.click();
     }
 
     @Then("user sees order confirmation message displayed")
     public void user_sees_order_confirmation_message_displayed() {
-
+        Assert.assertTrue(manufacturingPage.message.isDisplayed());
     }
 }
