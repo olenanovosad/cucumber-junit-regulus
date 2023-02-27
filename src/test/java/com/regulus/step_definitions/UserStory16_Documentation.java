@@ -1,6 +1,7 @@
 package com.regulus.step_definitions;
 
 import com.regulus.pages.DashboardPage;
+import com.regulus.pages.DocPage;
 import com.regulus.pages.LogInPage;
 import com.regulus.utilities.BrowserUtils;
 import com.regulus.utilities.ConfigurationReader;
@@ -50,8 +51,20 @@ public class UserStory16_Documentation {
 
     @Then("user sees  {string} in the url")
     public void user_sees_in_the_title(String string) {
-Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("documentation"));
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("documentation"));
     }
 
+    DocPage docPage = new DocPage();
 
+    @And("user sees {string} message is displayed")
+    public void userSeesMessageIsDisplayed(String message) {
+
+        Assert.assertTrue(docPage.message.isDisplayed());
+    }
+
+    @And("there are {int} main documents topics are listed")
+    public void thereAreMainDocumentsTopicsAreListed(int arg0) {
+        Assert.assertTrue(docPage.headers.size() == arg0);
+
+    }
 }
