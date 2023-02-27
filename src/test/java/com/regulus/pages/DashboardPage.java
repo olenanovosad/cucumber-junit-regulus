@@ -1,6 +1,7 @@
 package com.regulus.pages;
 
 import com.regulus.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.support.FindBy;
@@ -13,4 +14,11 @@ public class DashboardPage {
 
 @FindBy(xpath="//a[@href='/web#menu_id=194&action=220']")
     public WebElement notesPage;
+
+
+public void ClickMenu(String linkText){
+    WebElement element = Driver.getDriver().findElement(By.partialLinkText(linkText));
+element.click();
+}
+
 }
