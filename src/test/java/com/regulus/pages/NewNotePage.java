@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class NewNotePage {
+public class NewNotePage extends DashboardPage {
     public NewNotePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }

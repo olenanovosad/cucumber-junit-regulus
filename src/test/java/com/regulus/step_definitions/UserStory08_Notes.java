@@ -24,8 +24,8 @@ public class UserStory08_Notes {
     public void userIsLoggedInNotesPage() {
         Driver.getDriver().get(ConfigurationReader.getProperty("env"));
         logInPage.LogIn();
-        dashboardPage.notesPage.click();
-
+        notesPage.ClickMenu("Notes");
+        BrowserUtils.sleep(2);
     }
 
     @When("user clicks create button")
