@@ -24,6 +24,7 @@ public class LogInPage {
     public WebElement invalidMsg;
 
     public void LogIn() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
         emailInput.sendKeys(ConfigurationReader.getProperty("email"));
         passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
         logInBtn.click();

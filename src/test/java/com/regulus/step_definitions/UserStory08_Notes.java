@@ -22,7 +22,7 @@ public class UserStory08_Notes {
 
     @Given("User is logged in notes page")
     public void userIsLoggedInNotesPage() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
+
         logInPage.LogIn();
         notesPage.ClickMenu("Notes");
         BrowserUtils.sleep(2);

@@ -1,3 +1,4 @@
+@story16
 Feature: Access to the Documentation Page
 
   @AC1US16

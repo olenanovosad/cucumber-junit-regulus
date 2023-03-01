@@ -15,7 +15,7 @@ public class UserStory13_CreatingOrder {
 
     @Given("user is logged in on Manufacturing page")
     public void user_is_logged_in_on_manufacturing_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
+
         logInPage.LogIn();
         manufacturingPage.manufacturingBtn.click();
     }

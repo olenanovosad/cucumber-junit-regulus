@@ -19,7 +19,7 @@ public class UserStory16_Documentation {
 
     @Given("user is logged in")
     public void user_is_logged_in() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
+
         LogInPage logInPage = new LogInPage();
         logInPage.LogIn();
     }

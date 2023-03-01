@@ -1,3 +1,4 @@
+@story08
 Feature: Create a new note feature
 
   User Story:
