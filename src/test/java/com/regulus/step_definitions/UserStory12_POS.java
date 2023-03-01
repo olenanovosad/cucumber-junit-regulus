@@ -33,17 +33,27 @@ public class UserStory12_POS {
         BrowserUtils.sleep(2);
     }
 
-   @Then("all orders should be selected")
+    @Then("all orders should be selected")
     public void all_orders_should_be_selected() {
         for (WebElement order : poSpage.allOrders) {
             Assert.assertTrue(order.isSelected());
         }
-    BrowserUtils.sleep(5);
+        BrowserUtils.sleep(5);
     }
+
     @Then("Action dropdown should be displayed")
     public void action_dropdown_should_be_displayed() {
         Assert.assertTrue(poSpage.actionDropDown.isDisplayed());
     }
 
 
+    @When("user click action dropdown")
+    public void userClickActionDropdown() {
+        poSpage.actionDropDown.click();
+    }
+
+    @Then("user sees {int} options")
+    public void userSeesOptions(int options) {
+        Assert.assertTrue(options == poSpage.dropdwonOptions.size());
+    }
 }

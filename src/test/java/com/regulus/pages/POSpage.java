@@ -16,9 +16,6 @@ public class POSpage extends DashboardPage {
     @FindBy(partialLinkText = "Orders")
     public WebElement ordersOption;
 
-    @FindBy(xpath = "//th[contains(.,'Order Ref')]")
-    public WebElement OrderRef;
-
     @FindBy(xpath = "(//input[@type='checkbox'])[3]")
     public WebElement OrderRefCheckbox;
     @FindBy(xpath = "//tr//input[@type='checkbox']")
@@ -27,4 +24,6 @@ public class POSpage extends DashboardPage {
     @FindBy(xpath = "(//div[@class='btn-group o_dropdown'])[2]")
     public WebElement actionDropDown;
 
+    @FindBy(xpath = "//div[@class='btn-group o_dropdown open']//ul/li")
+    public List<WebElement> dropdwonOptions;
 }
