@@ -70,6 +70,7 @@ public class UserStory08_Notes {
 
     @Then("user sees Note Created message is displayed")
     public void user_sees_note_created_message_is_displayed() {
+
         Assert.assertTrue(newNotePage.message.isDisplayed());
     }
 

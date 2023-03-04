@@ -38,7 +38,7 @@ public class NewNotePage extends DashboardPage {
     @FindBy (xpath = "//button[@accesskey='s']")
     public WebElement saveBtn;
 
-    @FindBy (xpath = "//div[contains(@data-message-id,'246')]")
+    @FindBy (xpath = "//div[@class='o_thread_message_core o_mail_note']")
     public WebElement message;
 
 }
