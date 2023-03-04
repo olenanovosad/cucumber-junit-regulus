@@ -1,4 +1,4 @@
-@story08
+@story08 @regression
 Feature: Create a new note feature
 
   User Story:

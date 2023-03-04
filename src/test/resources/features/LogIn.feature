@@ -1,4 +1,4 @@
-@story02
+@story02 @regression
 Feature: ERP login feature
 
   User Story:

@@ -1,4 +1,4 @@
-@story16
+@story16 @regression
 Feature: Access to the Documentation Page
 
   @AC1US16
