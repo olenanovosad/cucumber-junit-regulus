@@ -29,5 +29,10 @@ public class LogInPage {
         passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
         logInBtn.click();
     }
-
+    public void LogIn(String username, String password) {
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
+        emailInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        logInBtn.click();
+    }
 }

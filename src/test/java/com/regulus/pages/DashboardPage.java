@@ -1,5 +1,6 @@
 package com.regulus.pages;
 
+import com.regulus.utilities.ConfigurationReader;
 import com.regulus.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -21,4 +22,26 @@ public void ClickMenu(String linkText){
 element.click();
 }
 
+    @FindBy(id = "login")
+    public WebElement emailInput;
+
+    @FindBy(id = "password")
+    public WebElement passwordInput;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement logInBtn;
+
+public void LogIn() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
+        emailInput.sendKeys(ConfigurationReader.getProperty("email"));
+        passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
+        logInBtn.click();
+    }
+
+    public void LogIn(String username, String password) {
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
+        emailInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        logInBtn.click();
+    }
 }

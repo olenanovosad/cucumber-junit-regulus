@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/regulus/step_definitions",
         dryRun = false,
-        tags = "@regression",
+        tags = "@US96",
         publish = true
 )
 
