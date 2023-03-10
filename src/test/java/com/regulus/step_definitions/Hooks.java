@@ -1,5 +1,6 @@
 package com.regulus.step_definitions;
 
+import com.regulus.utilities.BrowserUtils;
 import com.regulus.utilities.Driver;
 import com.regulus.utilities.Driver;
 import io.cucumber.java.After;
@@ -26,6 +27,7 @@ public class Hooks {
             scenario.attach(screenShot, "image/png", scenario.getName());
         }
         System.out.println("---> @After : RUNNING BEFORE EACH SCENARIO");
+        BrowserUtils.sleep(2);
         Driver.closeDriver();
     }
 
