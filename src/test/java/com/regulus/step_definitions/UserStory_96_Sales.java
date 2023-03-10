@@ -22,6 +22,7 @@ public class UserStory_96_Sales {
 
     @When("User clicks Sales menu option")
     public void user_clicks_sales_menu_option() {
+        BrowserUtils.sleep(2);
         salesPage.salesOption.click();
         BrowserUtils.sleep(1);
     }

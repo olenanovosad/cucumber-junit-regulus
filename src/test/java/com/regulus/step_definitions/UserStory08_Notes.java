@@ -24,6 +24,7 @@ public class UserStory08_Notes {
     public void userIsLoggedInNotesPage() {
 
         logInPage.LogIn();
+        BrowserUtils.sleep(2);
         notesPage.ClickMenu("Notes");
         BrowserUtils.sleep(2);
     }
