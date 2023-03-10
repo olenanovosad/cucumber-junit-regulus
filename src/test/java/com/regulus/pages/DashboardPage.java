@@ -8,6 +8,8 @@ import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class DashboardPage {
     public DashboardPage(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -31,6 +33,16 @@ element.click();
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement logInBtn;
 
+    @FindBy (xpath ="//ul[@class='nav navbar-nav navbar-left oe_application_menu_placeholder']//span")
+    public List<WebElement> menuOptions;
+
+    @FindBy (linkText = "SalesManager10")
+    public WebElement userName;
+    @FindBy (linkText = "EventsCRMManager10")
+    public WebElement userNameCRM;
+
+    @FindBy (xpath = "//li[contains(.,\"#Inbox\")]")
+    public WebElement headerInbox;
 public void LogIn() {
         Driver.getDriver().get(ConfigurationReader.getProperty("env"));
         emailInput.sendKeys(ConfigurationReader.getProperty("email"));
