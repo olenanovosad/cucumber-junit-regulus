@@ -1,4 +1,4 @@
-@story13 @regression
+@story13 @regression @smoke
 Feature: Verify create an order feature
 
   User story:As a Point of Sale manager (POS), I should be able to create manufacturing orders

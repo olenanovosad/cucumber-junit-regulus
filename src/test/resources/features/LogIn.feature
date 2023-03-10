@@ -1,4 +1,4 @@
-@story02 @regression
+@story02 @regression @smoke
 Feature: ERP login feature
 
   User Story:
